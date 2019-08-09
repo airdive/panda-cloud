@@ -1,0 +1,23 @@
+server:
+  port: 6671
+spring:
+  application:
+    name: panda-config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/liuisstack/panda-config.git
+          default-label: ${spring.profiles.active}
+          username: liuisstack
+          password: 9980aaAA
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://panda-server:8761/eureka/

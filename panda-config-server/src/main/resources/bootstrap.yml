@@ -1,20 +1,4 @@
-server:
-  port: 6671
 spring:
   application:
     name: panda-config-server
-  profiles:
-    active: dev
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/YuKongEr/panda-config
-          default-label: ${spring.profiles.active}
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://panda-server:8761/eureka/
 
