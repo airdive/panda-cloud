@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yukong.panda.user.model.entity.SysLog;
 import com.yukong.panda.user.model.entity.SysRole;
 import com.yukong.panda.user.model.query.SysLogQuery;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -15,6 +16,7 @@ import com.yukong.panda.user.model.query.SysLogQuery;
  * @author yukong
  * @since 2018-10-16
  */
+@Component
 public interface SysLogMapper extends BaseMapper<SysLog> {
 
     /**

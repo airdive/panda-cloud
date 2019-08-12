@@ -16,10 +16,10 @@ spring:
       name: ${spring.application.name}
   # DataSource Config
   datasource:
-    username: root
-    password: abc123
+    username: "${panda_gen_db_host:root}"
+    password: "${panda_gen_db_passwd:root}"
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/cloud?useUnicode=true&useSSL=false&characterEncoding=utf8
+    url: "jdbc:mysql://${panda_gen_db_host:172.31.18.86}:3306/cloud?useUnicode=true&useSSL=false&characterEncoding=utf8"
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml

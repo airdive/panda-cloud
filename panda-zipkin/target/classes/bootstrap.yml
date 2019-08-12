@@ -1,5 +1,4 @@
-server:
-  port: 5001
+
 spring:
   application:
     name: panda-zipkin
@@ -12,7 +11,7 @@ spring:
         service-id: panda-config-server
       fail-fast: false
       name: ${spring.application.name}
-      label: ${spring.profiles.active}
+      label: master
       profile: ${spring.profiles.active}
 
 #关闭验证
@@ -21,9 +20,3 @@ management:
     web:
       server:
         auto-time-requests: false
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://panda-server:8761/eureka/

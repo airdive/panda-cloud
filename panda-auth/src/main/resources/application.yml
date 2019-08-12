@@ -1,15 +1,25 @@
 server:
   port: 6868
 spring:
-  cloud:
-    config:
-      discovery:
-        service-id: panda-config-server
-        enabled: true
-      fail-fast: true
-      profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
-      name: ${spring.application.name}
+
+  datasource:
+    url: "jdbc:mysql://${PANDA_AUTH_DB_HOST:172.31.18.86}:3306/cloud?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true"
+    driver-class-name: com.mysql.jdbc.Driver
+    username: "${PANDA_AUTH_DB_USER:root}"
+    password: "${PANDA_AUTH_DB_PASSWD:root}"
+    dbcp2:
+      max-idle: 10
+      min-idle: 5
+      test-on-borrow: false
+      time-between-eviction-runs-millis: 18800
+      test-while-idle: true
+      validation-query: SELECT 1
+    hikari:
+      minimum-idle: 0
+  redis:
+    host: "${PANDA_AUTH_REDIS_HOST:172.31.18.86}"
+    port: 6379
+    password: x19961010
 
 eureka:
   instance:

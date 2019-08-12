@@ -11,8 +11,10 @@ spring:
         enabled: true
       server:
         git:
-          uri: https://github.com/liuisstack/panda-config.git
-          default-label: ${spring.profiles.active}
+          uri: https://github.com/liuisstack/panda-config
+          # 代码分支
+          default-label: master
+          searchPaths: panda-auth,panda-gateway,panda-message-service,panda-user-service,panda-zipkin,panda-config-server
           username: liuisstack
           password: 9980aaAA
 eureka:

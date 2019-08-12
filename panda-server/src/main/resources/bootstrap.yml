@@ -22,5 +22,5 @@ eureka:
     # 是否从eureka上拉取已注册服务列表
     fetch-registry: false
     service-url:
-      defaultZone: "http://${EUREKA_HOST:eureka.instance.hostname}:${server.port}/eureka/"
+      defaultZone: "http://${EUREKA_HOST:${eureka.instance.hostname}}:${server.port}/eureka/"
 

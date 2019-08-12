@@ -1,5 +1,4 @@
-server:
-  port: 9001
+
 spring:
   application:
     name: panda-user-service
@@ -11,8 +10,8 @@ spring:
         enabled: true
         service-id: panda-config-server
       profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
-      fail-fast: true
+      label: master
+      fail-fast: false
       name: ${spring.application.name}
 
 eureka:

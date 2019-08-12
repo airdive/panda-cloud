@@ -4,6 +4,7 @@ import com.yukong.panda.auth.service.fallback.SysUserServiceFallback;
 import com.yukong.panda.common.entity.SysUser;
 import com.yukong.panda.common.vo.SysUserVo;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2018-10-08
  */
 @FeignClient(name = "panda-user-service", fallback = SysUserServiceFallback.class)
-
+@Service
 public interface SysUserService {
 
     /**

@@ -12,11 +12,8 @@ spring:
         service-id: panda-config-server
       fail-fast: false
       name: ${spring.application.name}
-      label: ${spring.profiles.active}
+      label: master
       profile: ${spring.profiles.active}
-
-
-
 
 eureka:
   instance:

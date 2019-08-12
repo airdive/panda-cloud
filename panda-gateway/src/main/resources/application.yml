@@ -1,0 +1,13 @@
+
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: panda-auth,panda-user-service
+
+  Httpclient:
+    enabled: true
+  OkHttp:
+    enabled: false
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
