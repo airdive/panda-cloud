@@ -11,7 +11,7 @@ spring:
         enabled: true
       server:
         git:
-          uri: https://github.com/liuisstack/panda-config
+          uri: https://github.com/liuisstack/panda-config.git
           # 代码分支
           default-label: master
           searchPaths: panda-auth,panda-gateway,panda-message-service,panda-user-service,panda-zipkin,panda-config-server

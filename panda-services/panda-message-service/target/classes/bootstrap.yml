@@ -11,7 +11,7 @@ spring:
         enabled: true
         service-id: panda-config-server
       profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
+      label: master
       fail-fast: true
       name: ${spring.application.name}
 sms:

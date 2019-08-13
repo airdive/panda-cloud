@@ -2,7 +2,7 @@ server:
   port: 9001
 spring:
   datasource:
-    url: "jdbc:mysql://${PANDA_USER_DB_HOST:172.31.18.86}:3306/cloud?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true"
+#    url: "jdbc:mysql://${PANDA_USER_DB_HOST:172.31.18.86}:3306/cloud?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true"
     driver-class-name: com.mysql.jdbc.Driver
     username: "${PANDA_USER_DB_USER:root}"
     password: "${PANDA_USER_DB_PASSWD:root}"
