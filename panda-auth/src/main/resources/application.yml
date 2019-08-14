@@ -1,7 +1,8 @@
 server:
   port: 6868
 spring:
-
+  zipkin:
+    baseUrl:  http://localhost:5001
   datasource:
     url: "jdbc:mysql://${PANDA_AUTH_DB_HOST:172.31.18.86}:3306/cloud?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true"
     driver-class-name: com.mysql.jdbc.Driver

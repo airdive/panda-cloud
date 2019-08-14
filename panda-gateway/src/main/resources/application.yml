@@ -1,4 +1,9 @@
 
+zuul:
+  routes:
+    panda-auth: /auth/**
+    panda-user-service: /admin/**
+    panda-gen-service: /gen/**
 
 ribbon:
   eager-load:
@@ -11,3 +16,10 @@ ribbon:
     enabled: false
   ReadTimeout: 10000
   ConnectTimeout: 10000
+
+#关闭验证
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

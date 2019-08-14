@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan({"com.yukong.panda.common", "com.yukong.panda.gateway"})
+@ComponentScan({"com.yukong.panda.common", "com.yukong.panda.gateway","com.yukong.panda.filters"})
 @EnableZuulProxy
 @SpringBootApplication
 public class PandaGatewayApplication {
